@@ -1,7 +1,7 @@
 const axios = require("axios");
 const bcrypt = require("bcryptjs");
 const db = require("../database/dbConfig.js");
-const jwtKey = require("../_secrets/keys").jwtKey;
+const jwtKey = require("../_secrets/keys").jwtKey; // Don't understand why the .jwtKey needs to be here?
 const jwt = require("jsonwebtoken");
 const { authenticate } = require("./middlewares");
 
