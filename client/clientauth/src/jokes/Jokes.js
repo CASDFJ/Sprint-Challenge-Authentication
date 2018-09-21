@@ -29,7 +29,7 @@ class Jokes extends Component {
     };
 
     axios
-      .get("http://localhost:6500/api/jokes", reqOptions)
+      .get("http://localhost:3300/api/jokes", reqOptions)
       .then(res => {
         console.log("Users Data: ", res);
         this.setState({ jokes: res.data }); // Keep this for MVP
