@@ -22,3 +22,6 @@
 -The header contains the algorithm. Payload contains
 -permissions(claims)/data. The signature combines
 -the header and payload encoding it with a secret.
+
+// Sessions + cookies are stored on server side.
+// JWTs stored on client side.

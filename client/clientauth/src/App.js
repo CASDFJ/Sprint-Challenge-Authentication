@@ -20,6 +20,11 @@ class App extends Component {
       </div>
     );
   }
+
+  logout = event => {
+    localStorage.removeItem("jwt");
+    this.props.history.push("/SignIn");
+  };
 }
 
 export default withRouter(App);
