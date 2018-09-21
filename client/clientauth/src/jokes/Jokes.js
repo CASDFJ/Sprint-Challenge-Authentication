@@ -10,9 +10,10 @@ class Jokes extends Component {
     return (
       <div>
         <ul>
-          {this.state.jokes.map(user => (
-            <li key={user.id}>
-              {user.username}
+          {this.state.jokes.map(joke => (
+            <li key={joke.id}>
+              {`Set Up: ${joke.setup}`}
+              {`Punch-Line: ${joke.punchline}`}
             </li>
           ))}
         </ul>
