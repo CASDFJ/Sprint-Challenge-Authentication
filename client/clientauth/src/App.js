@@ -26,7 +26,7 @@ class App extends Component {
 
   logout = event => {
     localStorage.removeItem("jwt");
-    this.props.history.push("/SignIn");
+    this.props.history.push("/SignUp");
   };
 }
 

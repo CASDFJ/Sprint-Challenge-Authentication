@@ -37,7 +37,7 @@ class Jokes extends Component {
       })
       .catch(err => {
         console.log("Axios Error: ", err);
-        this.props.history.push("/login");
+        this.props.history.push("/SignIn");
       });
   }
 }

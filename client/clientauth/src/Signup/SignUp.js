@@ -49,7 +49,7 @@ class SignUp extends Component {
       .then(res => {
         console.log(res.data);
         // localStorage.setItem("jwt", res.data.token);
-        this.props.history.push("/login");
+        this.props.history.push("/SignIn");
       })
       .catch(err => {
         console.log("Axios Error: ", err);
