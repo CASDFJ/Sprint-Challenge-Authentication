@@ -3,14 +3,14 @@ import axios from "axios";
 
 class Jokes extends Component {
   state = {
-    users: []
+    jokes: []
   };
 
   render() {
     return (
       <div>
         <ul>
-          {this.state.users.map(user => (
+          {this.state.jokes.map(user => (
             <li key={user.id}>
               {user.username}
             </li>
@@ -32,7 +32,7 @@ class Jokes extends Component {
       .get("http://localhost:3300/api/jokes", reqOptions)
       .then(res => {
         console.log("Users Data: ", res);
-        this.setState({ users: res.data }); // Keep this for MVP
+        this.setState({ jokes: res.data }); // Keep this for MVP
       })
       .catch(err => {
         console.log("Axios Error: ", err);
