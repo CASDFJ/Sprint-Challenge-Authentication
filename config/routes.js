@@ -53,6 +53,23 @@ function register(req, res) {
 
 function login(req, res) {
   // implement user login
+  const creds = req.body;
+
+  db("users")
+    .where({ username: creds.username })
+    .first()
+    .then(user => {
+      if (user && bcrypt.compareSync(creds.password, user.password)) {
+        const token = generateToken(user);
+        res.status(200).json({ id: user.id, token });
+      } else {
+        res.status(401).json({ Error: "Cannot Authorize" });
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ Error: "Login Failed" });
+    });
 }
 
 function getJokes(req, res) {
