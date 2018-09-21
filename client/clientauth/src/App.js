@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Route, withRouter } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import Register from "./register/Register.js";
+import Login from "./auth/Login.js";
+import Jokes from "./jokes/Jokes.js"
 
 class App extends Component {
   render() {
