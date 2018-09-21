@@ -45,7 +45,7 @@ class SignUp extends Component {
     console.log(this.state);
 
     axios
-      .post("http://localhost:3300/api/register", this.state)
+      .post("http://localhost:1000/api/register", this.state)
       .then(res => {
         console.log(res.data);
         // localStorage.setItem("jwt", res.data.token);

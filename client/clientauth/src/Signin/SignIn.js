@@ -45,7 +45,7 @@ class SignIn extends Component {
     console.log(this.state);
 
     axios
-      .post("http://localhost:3300/api/login", this.state)
+      .post("http://localhost:1000/api/login", this.state)
       .then(res => {
         console.log(res.data);
         localStorage.setItem("jwt", res.data.token);
